@@ -1,0 +1,14 @@
+{
+  "name": "package-create",
+  "version": "1.0.0",
+  "main": "cli.js",
+  "bin": "cli.js",
+  "repository": "https://github.com/potato4d/package-create",
+  "author": "HANATANI Takuma <mail@potato4d.me>",
+  "license": "MIT",
+  "dependencies": {
+    "minimist": "^1.2.0",
+    "sao": "^0.22.17",
+    "superb": "^3.0.0"
+  }
+}

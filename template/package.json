@@ -1,0 +1,55 @@
+{
+  "name": "<%= name %>",
+  "version": "0.1.0",
+  "main": "lib/index.js",
+  "Author": "<%= author %>",
+  "license": "MIT",
+  "scripts": {<% if (language === 'Babel') { %>
+    "dev": "yarn build -w",
+    "build": "babel './src/**/*.js' --out-dir ./lib/"<% if (format === 'prettier') { %>,
+    "format": "prettier './{src, spec}/**/*.js' --write"<% } %><% if (unit === 'Jest') { %>,
+    "test": "jest",
+    "test:coverage": "jest --coverage"<% } %><% } %><% if(language === 'TypeScript') { %>
+    "dev": "yarn build -w",
+    "build": "tsc"<% if (format === 'prettier') { %>,
+    "format": "prettier './{src, spec}/**/*.{js,ts}' --write"<% } %><% if (unit === 'Jest') { %>,
+    "test": "jest",
+    "test:coverage": "jest --coverage"<% } %><% } %>
+  },
+  "devDependencies": {<% if (format === 'prettier') { %>
+    "prettier": "^1.13.7",<% } %><% if (language === 'Babel') { %>
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-preset-env": "^1.7.0"<% if (unit === 'Jest') { %>,
+    "jest": "^23.4.1",
+    "babel-jest": "^23.4.0"
+    <% } %><% } %><% if (language === 'TypeScript') { %>
+    "jest": "^23.4.1",
+    "@types/node": "^10.5.2",
+    "typescript": "^2.9.2"<% if (unit === 'Jest') { %>,
+    "@types/jest": "^23.3.0",
+    "ts-jest": "^23.0.1"
+    <% } %><% } %>
+  }<% if(unit === 'Jest') { %>,
+  "jest": {<% if (language === 'Babel') { %>
+    "transform": {
+      "^.+\\.jsx?$": "babel-jest"
+    }<% } %><% if (language === 'TypeScript') { %>
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.ts$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ]
+    <% } %>
+  }
+  <% } %>
+}
