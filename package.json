@@ -1,6 +1,6 @@
 {
   "name": "package-create",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "main": "cli.js",
   "bin": "cli.js",
   "repository": "https://github.com/potato4d/package-create",
