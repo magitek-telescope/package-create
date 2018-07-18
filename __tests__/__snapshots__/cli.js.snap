@@ -1,0 +1,131 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`cli.js defaults 1`] = `
+Array [
+  ".babelrc",
+  ".circleci/config.yml",
+  ".gitignore",
+  "package.json",
+  "spec/src/index.spec.js",
+  "src/index.js",
+]
+`;
+
+exports[`cli.js defaults 2`] = `
+Object {
+  "Author": "HANATANI Takuma",
+  "devDependencies": Object {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-jest": "^23.4.0",
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-preset-env": "^1.7.0",
+    "jest": "^23.4.1",
+    "prettier": "^1.13.7",
+  },
+  "jest": Object {
+    "transform": Object {
+      "^.+\\\\.jsx?$": "babel-jest",
+    },
+  },
+  "license": "MIT",
+  "main": "lib/index.js",
+  "scripts": Object {
+    "build": "babel './src/**/*.js' --out-dir ./lib/",
+    "dev": "yarn build -w",
+    "format": "prettier './{src, spec}/**/*.js' --write",
+    "test": "jest",
+    "test:coverage": "jest --coverage",
+  },
+}
+`;
+
+exports[`cli.js use Babel defaults 1`] = `
+Array [
+  ".babelrc",
+  ".circleci/config.yml",
+  ".gitignore",
+  "package.json",
+  "spec/src/index.spec.js",
+  "src/index.js",
+]
+`;
+
+exports[`cli.js use Babel defaults 2`] = `
+Object {
+  "Author": "HANATANI Takuma",
+  "devDependencies": Object {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-jest": "^23.4.0",
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-preset-env": "^1.7.0",
+    "jest": "^23.4.1",
+    "prettier": "^1.13.7",
+  },
+  "jest": Object {
+    "transform": Object {
+      "^.+\\\\.jsx?$": "babel-jest",
+    },
+  },
+  "license": "MIT",
+  "main": "lib/index.js",
+  "scripts": Object {
+    "build": "babel './src/**/*.js' --out-dir ./lib/",
+    "dev": "yarn build -w",
+    "format": "prettier './{src, spec}/**/*.js' --write",
+    "test": "jest",
+    "test:coverage": "jest --coverage",
+  },
+}
+`;
+
+exports[`cli.js use TypeScript defaults 1`] = `
+Array [
+  ".circleci/config.yml",
+  ".gitignore",
+  "package.json",
+  "spec/src/index.spec.ts",
+  "src/index.ts",
+  "tsconfig.json",
+]
+`;
+
+exports[`cli.js use TypeScript defaults 2`] = `
+Object {
+  "Author": "HANATANI Takuma",
+  "devDependencies": Object {
+    "@types/jest": "^23.3.0",
+    "@types/node": "^10.5.2",
+    "jest": "^23.4.1",
+    "prettier": "^1.13.7",
+    "ts-jest": "^23.0.1",
+    "typescript": "^2.9.2",
+  },
+  "jest": Object {
+    "moduleFileExtensions": Array [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node",
+    ],
+    "testRegex": "(/__tests__/.*|(\\\\.|/)(test|spec))\\\\.ts$",
+    "transform": Object {
+      "^.+\\\\.tsx?$": "ts-jest",
+    },
+  },
+  "license": "MIT",
+  "main": "lib/index.js",
+  "scripts": Object {
+    "build": "tsc",
+    "dev": "yarn build -w",
+    "format": "prettier './{src, spec}/**/*.{js,ts}' --write",
+    "test": "jest",
+    "test:coverage": "jest --coverage",
+  },
+}
+`;

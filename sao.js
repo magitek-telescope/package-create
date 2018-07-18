@@ -31,7 +31,8 @@ module.exports = {
     language: {
       message: 'Choose a build environment',
       type: 'list',
-      choices: ['Babel', 'TypeScript']
+      choices: ['Babel', 'TypeScript'],
+      default: 'Babel'
     },
     pm: {
       message: 'Choose a package manager',
